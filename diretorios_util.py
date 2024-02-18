@@ -18,3 +18,7 @@ def create_dirs(path):
 def  dirs_exists_or_throw_runtime(path):
     if(not check_if_dirs_exists(path)):
         raise FileNotFoundError(f"FILE NAO EXISTE : ${path}")
+    
+def delete_file(file):
+    if(check_if_dirs_exists(file)):
+        os.remove(file)
